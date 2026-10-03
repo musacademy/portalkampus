@@ -807,7 +807,20 @@ h6 {
   box-shadow: 0 6px 18px rgba(37, 211, 102, 0.42);
   transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
   text-decoration: none;
+}
+
+.whatsapp-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  background: rgba(37, 211, 102, 0.55);
+  z-index: -1;
   animation: wa-pulse 2.5s infinite;
+  will-change: transform, opacity;
 }
 
 .whatsapp-btn i {
@@ -847,13 +860,16 @@ h6 {
 
 @keyframes wa-pulse {
   0% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.55);
+    transform: scale(1);
+    opacity: 0.7;
   }
   70% {
-    box-shadow: 0 0 0 12px rgba(37, 211, 102, 0);
+    transform: scale(1.4);
+    opacity: 0;
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    transform: scale(1.4);
+    opacity: 0;
   }
 }
 
@@ -1125,8 +1141,8 @@ section,
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.6px;
-  font-weight: 500;
-  color: color-mix(in srgb, var(--default-color), transparent 35%);
+  font-weight: 600;
+  color: #493638;
   margin-top: 4px;
 }
 
@@ -1274,7 +1290,8 @@ section,
 
 .hero .hero-block .hero-visual .accred-card div span {
   font-size: 0.76rem;
-  color: color-mix(in srgb, var(--default-color), transparent 35%);
+  font-weight: 500;
+  color: #493638;
   margin-top: 2px;
 }
 
@@ -1356,6 +1373,7 @@ section,
   transition: all 0.35s ease;
 }
 
+.hero .features-block .feat-card h2,
 .hero .features-block .feat-card h3 {
   font-size: 1.2rem;
   font-weight: 700;
@@ -1636,6 +1654,7 @@ section,
   display: block;
 }
 
+.about .purpose-block h3,
 .about .purpose-block h4 {
   font-size: 1.15rem;
   font-weight: 700;
@@ -1716,6 +1735,7 @@ section,
   margin-bottom: 12px;
 }
 
+.about .milestones-section .milestone-card h4,
 .about .milestones-section .milestone-card h5 {
   font-size: 1.05rem;
   font-weight: 700;
@@ -2373,6 +2393,7 @@ section,
   flex-direction: column;
 }
 
+.students-life-block .campus-activities .activity-card .card-body h3,
 .students-life-block .campus-activities .activity-card .card-body h5 {
   font-size: 1.1rem;
   font-weight: 700;
@@ -2527,6 +2548,7 @@ section,
   margin-bottom: 8px;
 }
 
+.testimonials .reviewer-details h3,
 .testimonials .reviewer-details h5 {
   font-size: 1.05rem;
   font-weight: 700;
@@ -2579,6 +2601,7 @@ section,
     font-size: 0.92rem;
   }
 
+  .testimonials .reviewer-details h3,
   .testimonials .reviewer-details h5 {
     font-size: 1rem;
   }
@@ -2617,6 +2640,7 @@ section,
     text-align: center;
   }
 
+  .testimonials .reviewer-details h3,
   .testimonials .reviewer-details h5 {
     font-size: 0.95rem;
   }
@@ -2730,6 +2754,7 @@ section,
   margin-bottom: 0.75rem;
 }
 
+.stats .stats-banner .stat-block h3,
 .stats .stats-banner .stat-block h5 {
   font-size: 1rem;
   font-weight: 600;
@@ -2902,6 +2927,7 @@ section,
   transition: all 0.3s ease;
 }
 
+.stats .detail-content .feature-list .feature-entry .feature-detail h4,
 .stats .detail-content .feature-list .feature-entry .feature-detail h5 {
   font-size: 1.05rem;
   font-weight: 700;

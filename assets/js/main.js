@@ -65,9 +65,12 @@
    */
   const preloader = document.querySelector('#preloader');
   if (preloader) {
-    window.addEventListener('load', () => {
+    if (document.readyState === 'complete' || document.readyState === 'interactive') {
       preloader.remove();
-    });
+    } else {
+      window.addEventListener('DOMContentLoaded', () => preloader.remove(), { once: true });
+      window.addEventListener('load', () => preloader.remove(), { once: true });
+    }
   }
 
   /**
@@ -80,13 +83,15 @@
       window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
     }
   }
-  scrollTop.addEventListener('click', (e) => {
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
+  if (scrollTop) {
+    scrollTop.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     });
-  });
+  }
 
   window.addEventListener('load', toggleScrollTop);
   document.addEventListener('scroll', toggleScrollTop);
@@ -95,19 +100,26 @@
    * Animation on scroll function and init
    */
   function aosInit() {
-    AOS.init({
-      duration: 600,
-      easing: 'ease-in-out',
-      once: true,
-      mirror: false
-    });
+    if (typeof AOS !== 'undefined') {
+      AOS.init({
+        duration: 600,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false
+      });
+    }
   }
-  window.addEventListener('load', aosInit);
+  if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    aosInit();
+  } else {
+    window.addEventListener('DOMContentLoaded', aosInit, { once: true });
+  }
 
   /**
    * Init swiper sliders
    */
   function initSwiper() {
+    if (typeof Swiper === 'undefined') return;
     document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
       let config = JSON.parse(
         swiperElement.querySelector(".swiper-config").innerHTML.trim()
@@ -121,7 +133,11 @@
     });
   }
 
-  window.addEventListener("load", initSwiper);
+  if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    initSwiper();
+  } else {
+    window.addEventListener('DOMContentLoaded', initSwiper, { once: true });
+  }
 
   /**
    * Initiate Pure Counter
