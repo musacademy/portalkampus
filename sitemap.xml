@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Beranda (Homepage) -->
+  <url>
+    <loc>https://portalkampus.ac.id/beranda.html</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="id" href="https://portalkampus.ac.id/beranda.html"/>
+  </url>
+
+  <!-- Pendaftaran Mahasiswa Baru (Admissions) -->
+  <url>
+    <loc>https://portalkampus.ac.id/pendaftaran.html</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="id" href="https://portalkampus.ac.id/pendaftaran.html"/>
+  </url>
+
+  <!-- Profil Kampus & Tentang Kami -->
+  <url>
+    <loc>https://portalkampus.ac.id/tentang-kami.html</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="id" href="https://portalkampus.ac.id/tentang-kami.html"/>
+  </url>
+
+  <!-- Program Akademik & Pilihan Jurusan -->
+  <url>
+    <loc>https://portalkampus.ac.id/akademik.html</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="id" href="https://portalkampus.ac.id/akademik.html"/>
+  </url>
+
+  <!-- Fasilitas Kampus Terpadu -->
+  <url>
+    <loc>https://portalkampus.ac.id/fasilitas-kampus.html</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="id" href="https://portalkampus.ac.id/fasilitas-kampus.html"/>
+  </url>
+
+  <!-- Kehidupan Mahasiswa & Komunitas UKM -->
+  <url>
+    <loc>https://portalkampus.ac.id/kehidupan-mahasiswa.html</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="id" href="https://portalkampus.ac.id/kehidupan-mahasiswa.html"/>
+  </url>
+
+  <!-- Portal Berita -->
+  <url>
+    <loc>https://portalkampus.ac.id/berita.html</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="id" href="https://portalkampus.ac.id/berita.html"/>
+  </url>
+
+  <!-- Detail Berita -->
+  <url>
+    <loc>https://portalkampus.ac.id/detail-berita.html</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="id" href="https://portalkampus.ac.id/detail-berita.html"/>
+  </url>
+
+  <!-- Kegiatan & Agenda Kampus -->
+  <url>
+    <loc>https://portalkampus.ac.id/kegiatan.html</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="id" href="https://portalkampus.ac.id/kegiatan.html"/>
+  </url>
+
+  <!-- Detail Kegiatan -->
+  <url>
+    <loc>https://portalkampus.ac.id/detail-kegiatan.html</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="id" href="https://portalkampus.ac.id/detail-kegiatan.html"/>
+  </url>
+
+  <!-- Dosen & Staf Akademik -->
+  <url>
+    <loc>https://portalkampus.ac.id/dosen-staf.html</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="id" href="https://portalkampus.ac.id/dosen-staf.html"/>
+  </url>
+
+  <!-- Jejaring Alumni -->
+  <url>
+    <loc>https://portalkampus.ac.id/alumni.html</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="id" href="https://portalkampus.ac.id/alumni.html"/>
+  </url>
+
+  <!-- Pusat Kontak & Lokasi -->
+  <url>
+    <loc>https://portalkampus.ac.id/kontak.html</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="id" href="https://portalkampus.ac.id/kontak.html"/>
+  </url>
+
+  <!-- Kebijakan Privasi -->
+  <url>
+    <loc>https://portalkampus.ac.id/kebijakan-privasi.html</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="id" href="https://portalkampus.ac.id/kebijakan-privasi.html"/>
+  </url>
+
+  <!-- Ketentuan Layanan -->
+  <url>
+    <loc>https://portalkampus.ac.id/ketentuan-layanan.html</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="id" href="https://portalkampus.ac.id/ketentuan-layanan.html"/>
+  </url>
+
+</urlset>
+
