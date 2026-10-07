@@ -231,6 +231,9 @@ Agar UniPulse mendominasi pencarian Google maupun mesin pencari AI (ChatGPT, Per
    - Penggunaan heading hierarki yang jelas (`H1`, `H2`, `H3`) berbasis query FAQ umum mahasiswa.
 3. **OpenGraph & Twitter Card Dinamis**: Setiap halaman artikel dan event memiliki banner beresolusi 1200x630px dengan metadata lengkap.
 
+> [!NOTE]
+> Panduan strategi lengkap, riset kata kunci, 9 metode GEO Princeton, arsitektur Schema.org JSON-LD, kalender konten editorial, dan KPI tercantum detail pada dokumen [seo_strategy.md](file:///d:/Magang%20Industri/UniPulse-pro/docs/seo_strategy.md).
+
 ---
 
 ## 9. Rencana Monetisasi & Keberlanjutan (*Business Model*)

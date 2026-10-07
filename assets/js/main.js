@@ -198,4 +198,153 @@
     });
   }
 
+  /**
+   * News Pagination Handler (#pagination-2)
+   */
+  function initNewsPagination() {
+    const paginationSection = document.getElementById('pagination-2');
+    if (!paginationSection) return;
+
+    const pageItems = document.querySelectorAll('.news-page-item');
+    if (!pageItems.length) return;
+
+    const totalPages = pageItems.length;
+    let currentPage = 1;
+
+    const pageInfo = paginationSection.querySelector('.page-info');
+    const prevBtn = paginationSection.querySelector('.prev-btn');
+    const nextBtn = paginationSection.querySelector('.next-btn');
+    const pageNumbersContainer = paginationSection.querySelector('.page-numbers');
+    const progressFill = paginationSection.querySelector('.progress-fill');
+    const newsPostsSection = document.getElementById('news-posts');
+
+    function renderPageNumbers() {
+      if (!pageNumbersContainer) return;
+      pageNumbersContainer.innerHTML = '';
+
+      const pages = [];
+      if (totalPages <= 5) {
+        for (let i = 1; i <= totalPages; i++) pages.push(i);
+      } else {
+        pages.push(1);
+        if (currentPage > 3) pages.push('dots');
+        const start = Math.max(2, currentPage - 1);
+        const end = Math.min(totalPages - 1, currentPage + 1);
+        for (let i = start; i <= end; i++) {
+          if (!pages.includes(i)) pages.push(i);
+        }
+        if (currentPage < totalPages - 2) pages.push('dots');
+        if (!pages.includes(totalPages)) pages.push(totalPages);
+      }
+
+      pages.forEach(p => {
+        const li = document.createElement('li');
+        if (p === 'dots') {
+          li.className = 'dots';
+          li.innerHTML = '<span>···</span>';
+        } else {
+          const a = document.createElement('a');
+          a.href = '#news-posts';
+          a.textContent = p;
+          if (p === currentPage) {
+            a.className = 'active';
+            a.setAttribute('aria-current', 'page');
+          }
+          a.addEventListener('click', function(e) {
+            e.preventDefault();
+            goToPage(p);
+          });
+          li.appendChild(a);
+        }
+        pageNumbersContainer.appendChild(li);
+      });
+    }
+
+    function goToPage(targetPage, shouldScroll = true) {
+      if (targetPage < 1 || targetPage > totalPages) return;
+      currentPage = targetPage;
+
+      pageItems.forEach(item => {
+        const itemPage = parseInt(item.getAttribute('data-page'), 10);
+        if (itemPage === currentPage) {
+          item.classList.add('active');
+          item.style.display = 'block';
+          setTimeout(() => { item.style.opacity = '1'; }, 10);
+        } else {
+          item.classList.remove('active');
+          item.style.opacity = '0';
+          item.style.display = 'none';
+        }
+      });
+
+      if (pageInfo) {
+        pageInfo.innerHTML = `Menampilkan halaman <strong>${currentPage}</strong> dari <strong>${totalPages}</strong>`;
+      }
+
+      if (prevBtn) {
+        if (currentPage === 1) {
+          prevBtn.classList.add('disabled');
+        } else {
+          prevBtn.classList.remove('disabled');
+        }
+      }
+
+      if (nextBtn) {
+        if (currentPage === totalPages) {
+          nextBtn.classList.add('disabled');
+        } else {
+          nextBtn.classList.remove('disabled');
+        }
+      }
+
+      if (progressFill) {
+        const percent = Math.round((currentPage / totalPages) * 100);
+        progressFill.style.width = `${percent}%`;
+      }
+
+      renderPageNumbers();
+
+      if (shouldScroll && newsPostsSection) {
+        const headerOffset = 100;
+        const elementPosition = newsPostsSection.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+
+      if (typeof AOS !== 'undefined') {
+        AOS.refresh();
+      }
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (currentPage > 1) {
+          goToPage(currentPage - 1);
+        }
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (currentPage < totalPages) {
+          goToPage(currentPage + 1);
+        }
+      });
+    }
+
+    goToPage(1, false);
+  }
+
+  if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    initNewsPagination();
+  } else {
+    window.addEventListener('DOMContentLoaded', initNewsPagination, { once: true });
+  }
+
 })();
